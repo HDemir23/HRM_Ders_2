@@ -53,6 +53,8 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.printdoc = new System.Drawing.Printing.PrintDocument();
+            this.printpreview = new System.Windows.Forms.PrintPreviewDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -96,6 +98,7 @@
             this.button1.TabIndex = 42;
             this.button1.Text = "Printf";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label7
             // 
@@ -328,6 +331,21 @@
             this.pictureBox6.TabStop = false;
             this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
+            // printdoc
+            // 
+            this.printdoc.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // printpreview
+            // 
+            this.printpreview.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printpreview.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printpreview.ClientSize = new System.Drawing.Size(400, 300);
+            this.printpreview.Enabled = true;
+            this.printpreview.Icon = ((System.Drawing.Icon)(resources.GetObject("printpreview.Icon")));
+            this.printpreview.Name = "printPreviewDialog1";
+            this.printpreview.Visible = false;
+            this.printpreview.Load += new System.EventHandler(this.printPreviewDialog1_Load);
+            // 
             // Salary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -401,5 +419,7 @@
         private PictureBox pictureBox5;
         private Label label9;
         private PictureBox pictureBox6;
+        private System.Drawing.Printing.PrintDocument printdoc;
+        private PrintPreviewDialog printpreview;
     }
 }

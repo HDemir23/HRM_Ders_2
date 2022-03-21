@@ -105,6 +105,33 @@ namespace HRM_Ders_2
 
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (printpreview.ShowDialog() == DialogResult.OK)
+            {
+                printdoc.Print();
+            }
+        }
+
+        private void printPreviewDialog1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            e.Graphics.DrawString("======= SALARY SUMMARY =======", new Font("Century Gothic", 20, FontStyle.Bold), Brushes.Red, new Point(170));
+            e.Graphics.DrawString("Employee ID          : " + EmpIdTb.Text,      new Font("Century Gothic", 18, FontStyle.Bold), Brushes.Blue, new Point(70, 100));
+            e.Graphics.DrawString("Employee Name        : " + EmpNameTb.Text,    new Font("Century Gothic", 18, FontStyle.Bold), Brushes.Blue, new Point(70, 140));
+            e.Graphics.DrawString("Employee Position    : " + EmpPosTb.Text,     new Font("Century Gothic", 18, FontStyle.Bold), Brushes.Blue, new Point(70, 180));
+            e.Graphics.DrawString("Worked Days          : " + WorkedTb.Text,     new Font("Century Gothic", 18, FontStyle.Bold), Brushes.Blue, new Point(70, 220));
+            e.Graphics.DrawString("Daily Pay            : " + DailyBase,         new Font("Century Gothic", 18, FontStyle.Bold), Brushes.Blue, new Point(70, 260));
+            e.Graphics.DrawString("Total Salary         : " + total,             new Font("Century Gothic", 18, FontStyle.Bold), Brushes.Blue, new Point(70, 300));
+          //  e.Graphics.DrawString("Employee Phone: " + EmpPhonelbl.Text, new Font("Century Gothic", 18, FontStyle.Bold), Brushes.Blue, new Point(70, 340));
+            //e.Graphics.DrawString("Employee Education: " + EmpEdulbl.Text, new Font("Century Gothic", 18, FontStyle.Bold), Brushes.Blue, new Point(70, 380));
+
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
             if(EmpPosTb.Text == "")
