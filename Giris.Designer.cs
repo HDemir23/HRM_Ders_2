@@ -52,11 +52,11 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label2.Location = new System.Drawing.Point(143, 221);
+            this.label2.Location = new System.Drawing.Point(185, 221);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(243, 21);
+            this.label2.Size = new System.Drawing.Size(148, 21);
             this.label2.TabIndex = 1;
-            this.label2.Text = "AHMET HAKAN DEMİR-İSRAFİL ÖMER";
+            this.label2.Text = "AHMET HAKAN DEMİR\r\n";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // MyProgress
@@ -87,6 +87,7 @@
             this.Name = "Giris";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Giris_Load);
             ((System.ComponentModel.ISupportInitialize)(this.MyProgress)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

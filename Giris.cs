@@ -27,5 +27,10 @@ namespace HRM_Ders_2
                 
             
         }
+
+        private void Giris_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
