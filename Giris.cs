@@ -11,5 +11,21 @@ namespace HRM_Ders_2
         {
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
+            this.Hide();
+        }
+        
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            
+            
+                
+            
+        }
     }
 }

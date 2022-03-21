@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.MyProgress = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.MyProgress)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -58,32 +59,20 @@
             this.label2.Text = "AHMET HAKAN DEMİR-İSRAFİL ÖMER";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // button1
+            // MyProgress
             // 
-            this.button1.Location = new System.Drawing.Point(222, 102);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 29);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.MyProgress.Image = global::HRM_Ders_2.Properties.Resources.user;
+            this.MyProgress.Location = new System.Drawing.Point(203, 81);
+            this.MyProgress.Name = "MyProgress";
+            this.MyProgress.Size = new System.Drawing.Size(121, 91);
+            this.MyProgress.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.MyProgress.TabIndex = 2;
+            this.MyProgress.TabStop = false;
+            this.MyProgress.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // button2
+            // timer1
             // 
-            this.button2.Location = new System.Drawing.Point(56, 102);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 29);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(386, 102);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(94, 29);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Giris
             // 
@@ -91,15 +80,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkBlue;
             this.ClientSize = new System.Drawing.Size(523, 251);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.MyProgress);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Giris";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.MyProgress)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -109,8 +97,7 @@
 
         private Label label1;
         private Label label2;
-        private Button button1;
-        private Button button2;
-        private Button button3;
+        private PictureBox MyProgress;
+        private System.Windows.Forms.Timer timer1;
     }
 }
